@@ -31,8 +31,8 @@ def main() -> None:
 			time.sleep(0.8)
 			main()
 
-		if b < 2 or b > 26:
-			print('Base-x must be between 2 and 26 (inclusive). Please try again...')
+		if b < 2 or b > 36:
+			print('Base-x must be between 2 and 36 (inclusive). Please try again...')
 			time.sleep(0.8)
 			main()
 
@@ -56,8 +56,8 @@ def main() -> None:
 			time.sleep(0.8)
 			main()
 
-		if b < 2 or b > 26:
-			print('Base-x must be between 2 and 26 (inclusive). Please try again...')
+		if b < 2 or b > 36:
+			print('Base-x must be between 2 and 36 (inclusive). Please try again...')
 			time.sleep(0.8)
 			main()
 
@@ -83,7 +83,7 @@ def main() -> None:
 			time.sleep(0.8)
 			main()
 
-		if b1 < 2 or b1 > 26 or b2 < 2 or b2 > 26:
+		if b1 < 2 or b1 > 36 or b2 < 2 or b2 > 36:
 			print('Base-x must be between 2 and 26 (inclusive). Please try again...')
 			time.sleep(0.8)
 			main()
@@ -126,7 +126,7 @@ def custom_base_to_denary(n, b) -> int:
 			val = int(n[idx])
 			if val > max_unit:
 				return -99
-		except:
+		except ValueError:
 			val = ord(n[idx]) - 55
 			if val > 35 or val < 10 or val > max_unit:
 				return -99
